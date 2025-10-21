@@ -3,7 +3,7 @@
 library(tidyverse)
 library(magick)
 
-path <- "C:\documents\Agrocampus\M2\Conference\Machine-Learning-Conference\Data\archive"
+path <- "C:/documents/Agrocampus/M2/Conference/Machine-Learning-Conference/Data/archive/Dataset"
 extensions <- c("png", "jpg", "jpeg") # Formats d'images pris en charge
 
 # Lister tous les fichiers correspondants dans les sous-dossiers
@@ -15,7 +15,7 @@ images <- list.files(
 )
 
 # Extraire la "classe" (nom du dossier parent)
-classes <- basename(dirname(image_files)) # fresh / rotten 
+classes <- basename(dirname(images)) # fresh / rotten 
 
 # Créer le data frame
 df_images <- data.frame(
@@ -28,10 +28,8 @@ df_images <- data.frame(
 head(df_images)
 
 
-
-
 # Exportation du data set 
-write.csv(x = frui, file = "monFichier.csv")
+write.csv(x = df_images, file = "df_images.csv")
 
 
 
