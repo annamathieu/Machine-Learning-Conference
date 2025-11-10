@@ -1,9 +1,12 @@
+# Installation des packages 
 install.packages("keras3")
-library(keras3)
-library(tensorflow)
 install_keras()
 
+# Chargement des packges 
+library(keras3)
+library(tensorflow)
 require("tensorflow")
+
 # Check TensorFlow version
 tensorflow::tf_config()
 
